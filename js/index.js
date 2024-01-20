@@ -76,12 +76,12 @@ function renderStat($table, stat) {
   const $cashOut = td(stat.cashOut, true)
   const $total = td(total, true)
   const $deleteButton = document.createElement("button")
+  const $deleteCell = document.createElement("td")
 
   $deleteButton.setAttribute("type", "button")
   $deleteButton.dataset.date = stat.date
   $deleteButton.classList.add("destructive")
   $deleteButton.innerText = "Delete"
-  $deleteCell = document.createElement("td")
   $deleteCell.appendChild($deleteButton)
 
   $stat.appendChild($date)
