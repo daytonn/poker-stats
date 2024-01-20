@@ -2,8 +2,9 @@
   "name": "poker-stats",
   "version": "1.0.0",
   "description": "My Poker Stats",
-  "main": "dist/index.html",
+  "main": "index.js",
   "scripts": {
+    "build": "parcel build index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -21,6 +22,7 @@
     "eslint-plugin-promise": "^6.1.1",
     "minimist": ">=1.2.2",
     "parcel": "^2.10.3",
+    "parcel-bundler": "^1.12.5",
     "parcel-plugin-clean-easy": "^1.0.2",
     "parcel-plugin-static-files-copy": "^2.6.0"
   },
