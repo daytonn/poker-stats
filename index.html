@@ -8,6 +8,12 @@
     <link rel="stylesheet" type="text/css" href="css/app.css" />
     <link rel="manifest" href="manifest.json" />
     <title>Poker Stats</title>
+    <script>
+      const sw = navigator.serviceWorker
+      sw.register("js/service-worker.js")
+        .then(reg => console.log(reg))     // ok
+        .catch(err => console.error(err)); // error
+    </script>
   </head>
   <body>
     <h1>Poker Stats</h1>
