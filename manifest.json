@@ -1,0 +1,8 @@
+{
+  "name": "Poker Stats",
+  "short_name": "Poker Stats",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fff",
+  "description": "My Poker Stats"
+}

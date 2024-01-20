@@ -1,0 +1,48 @@
+body {
+  padding: 1em;
+}
+
+.hidden {
+  visibility: none;
+  display: none;
+}
+
+#controls {
+  margin-bottom: 1em;
+}
+
+.modal-mask {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.modal {
+  padding: 2em;
+  position: absolute;
+  left: 30%;
+  right: 30%;
+  top: 10%;
+  bottom: 60%;
+  background-color: var(--color-white-500);
+}
+
+.controls {
+  margin-bottom: 1em;
+}
+
+.form-field {
+  margin-bottom: 1em;
+}
+
+input:invalid {
+  border: 2px solid var(--color-red-500);
+}
+
+input:valid {
+  border: 2px solid black;
+}
