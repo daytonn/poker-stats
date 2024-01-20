@@ -1,7 +1,9 @@
 import Stats from "./stats.js"
 import "./components/money.js"
 import "./components/stat.js"
+import { seed } from "./seeds.js"
 
+const $main = document.querySelector("main")
 const $stats = document.querySelector("#stats")
 const $total = document.querySelector("#total")
 const $form = document.querySelector("#new-stat-form")
@@ -114,7 +116,21 @@ function closeModal() {
   render()
 }
 
+function renderSeedButton() {
+  if (Stats.all.length) return
+  if (document.querySelector(".seed-data")) return
+  const button = document.createElement("button")
+  button.innerText = "Seed data"
+  button.classList.add("seed-data")
+  $main.appendChild(button)
+  button.addEventListener("click", () => {
+    seed()
+    render()
+  })
+}
+
 function render() {
+  renderSeedButton()
   renderStats()
   renderTotal()
   renderAverage()
@@ -147,6 +163,7 @@ document.addEventListener("keyup", ({ keyCode }) => {
 $modal.addEventListener("click", e => {
   e.stopPropagation()
 })
+
 $modalMask.addEventListener("click", () => {
   closeModal()
 })
@@ -157,8 +174,6 @@ $addButton.addEventListener("click", () => {
 
 $form.addEventListener("submit", e => {
   e.preventDefault()
-
-  console.log(submit)
 
   Stats.add({
     date: new Date($dateInput.value),

@@ -40,6 +40,7 @@ class Stats {
   }
 
   get average() {
+    if (!this.all.length) return 0
     return this.totalWinnings / this.all.length
   }
 
